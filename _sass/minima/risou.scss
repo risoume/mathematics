@@ -1,0 +1,323 @@
+
+* {box-sizing: border-box;}
+
+html, body {
+    margin:0;
+    padding:0;
+    font-family:"Open Sans",sans-serif;
+    letter-spacing:.02em;
+    line-height:1.4;
+    color:#222;
+    font-size:1.6rem;
+}
+
+:root {font-size: 10px}
+
+// Body Section
+
+main, nav .links{
+    max-width: 115rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+main {padding-bottom: 5rem;}
+
+h1 {
+    font-family: garamond, serif;
+    font-weight: normal;
+    font-size: 4rem;
+    margin: 0;
+}
+
+nav {
+    position: fixed;
+    top:0;
+    width:100%;
+    z-index: 5;
+    height:5rem;
+    font-size:16px;
+    background: rgba(221,221,221,0.6);
+}
+
+nav:hover {background: rgba(221,221,221,0.75)}
+
+nav .links {
+    list-style-type: none;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+nav .links a {
+    color: rgb(41,87,139);
+    letter-spacing: 2px;
+    display: block;
+    margin: 0em 1em;
+    padding: 0 2px;
+    font-family: garamond, serif;
+    text-decoration: none;
+}
+
+nav .links a:hover {
+    text-shadow: 0px 0px 5px #fff;
+    letter-spacing: 3px;
+}
+
+header {margin-bottom: 10rem;}
+
+.content {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+
+@media (max-width: 620px) {.content {flex-wrap: wrap; margin-bottom: 2rem;}}
+
+.content .subject {width: 40%;}
+
+@media (max-width: 620px){
+    .content .subject h1 {font-size: 3rem;}
+}
+
+@media (max-width: 620px) {
+    .content .subject, .content .math-show {width:100%;}
+}
+
+.subject a span {
+    background: antiquewhite;
+    font-family: monospace;
+    padding: 2px;
+    border-bottom: 1px solid rgb(38, 163, 201);
+}
+
+.content-page {
+    display: initial;
+}
+
+.content-page .topic-list {
+    max-width: 70rem;
+    padding: 2rem;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+    background-color: #f2f1e8;
+    box-shadow: 0 5px 5px -3px #555, 0 -5px 5px -3px #3d91e0;
+}
+
+@media (max-width: 620px) {
+    .content-page .topic-list {width:100%;}
+}
+
+.content-page .topic-list h1 {font-size: 3rem;}
+
+// User Area: only in math-utility. Input and Button
+
+.user-area {
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 20px 10px;
+    background-color: #f2f1e8;
+    border: 1px solid  #d0d7de;
+}
+
+.user-area button {
+    width: calc(100% - 2rem);
+    margin-left: 1rem;
+    background: #fb475e;
+}
+
+.list-utility {
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 0;
+    border-top: 1px solid #a7aaad;
+}
+
+.label-input {
+    margin-bottom: 7px;
+    font-size: 1.4rem;
+}
+
+.input-block {
+    width: 100%;
+    border: 1px solid  #d0d7de;
+    border-radius: 8px;
+    padding: 5px 7px;
+    margin: 10px 0;
+    font-size: 14px;
+    outline: none;
+}
+
+.input-block:focus {
+    box-shadow: 0 0 5px rgb(81, 203, 238);
+    border: 1px solid rgb(81, 203, 238);
+}
+
+// Botton on .subject
+
+.btn-box {display: flex;}
+
+button {
+    font-family: garamond, serif;
+    transform: scale(1);
+    position: relative;
+    padding: 10px;
+    font-size: 14px;
+    margin: 0 1rem;
+    font-weight: bold;
+    line-height: 20px;
+    letter-spacing: 2px;
+    border-radius: 6px;
+    color: white;
+    box-shadow: 0px 6px 0px 0px rgba(0, 0, 0, 0.06);
+    width: 100%;
+    margin-top: 10px;
+}
+
+button:not(.btn-mode):hover, button:not(.btn-mode):focus {
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.06);
+    transform: scale(.98)
+}
+
+// Output of Program
+
+.math-show {
+    width: 40%;
+    padding: 0 1em;
+    min-height: 150px;
+    border-radius: 5px;
+    border: 2px solid #ddd;
+    margin: 3rem 0rem;
+}
+
+.canvas-env {
+    padding: 10px 0;
+    overflow: auto;
+}
+
+.canvas-env .canvas-show {
+    display: block;
+    margin: 0 auto;
+}
+
+.layer-display {
+    padding: 15px 10px;
+}
+
+// Footer Section
+
+#lisensi {
+    padding: 7px;
+    background: rgb(235, 235, 235);
+    font-size: 1.4rem;
+}
+
+#lisensi a {color: #2f2f2f;}
+
+#last a {display: block;
+    width: 100%;
+    padding: 25px;
+    text-align:center;
+    font-family: garamond, serif;
+    background: rgb(41,87,139);
+    letter-spacing: 8px;
+    text-decoration: none;
+    color:#fff;
+    margin: 0;
+}
+
+#last a:hover {
+    text-shadow: 0px 0px 2px #fff; letter-spacing: 9px;
+}
+
+// for mathjax
+
+.m-d {
+    overflow-x: auto;
+    display: block;
+}
+
+// addition for math bot
+
+a {
+    text-decoration: none;
+    color: #2f2f2f;
+}
+
+ol {
+    padding-left: 10px;
+}
+
+ol li a:hover {
+    color: rgb(41,87,139);
+}
+
+// 3 mode: solve, random, latihan
+
+.mode {
+    width:100%;
+    height:5rem;
+    text-align: center;
+}
+
+.mode > .btn-mode {
+    font-family:"Open Sans",sans-serif;
+    font-size: 1.3rem;
+    width: initial;
+    font-weight: normal;
+    line-height: normal;
+    color: black;
+    padding: 5px;
+    margin: 0 5px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: none;
+}
+
+.mode > .mode-active {
+    padding: 7px 12px;
+    background: rgb(38, 163, 201);
+    box-shadow: 0 5px 5px -3px #555;
+    color: #fff;
+}
+
+.random {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.acak {
+    padding: 5px 10px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    color: #000;
+    width: auto;
+    display: none;
+}
+
+// Tombol untuk melihat solusi pada mode latihan
+
+#look {
+    color: #fb475e;
+    display: none;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0 5px;
+    cursor: pointer;
+}
+
+// Untuk post tentang warna
+
+.color-box {
+    position: relative;
+    width: 80%;
+    height: 150px;
+    border: 1px dashed black;
+    margin: 0 auto;
+}

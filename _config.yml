@@ -1,0 +1,35 @@
+title: Risou Mathematics
+author:
+  name: Risou
+  email: zarisoume@gmail.com
+description: > # this means to ignore newlines until "show_excerpts:"
+
+permalink: /:title/
+
+show_excerpts: # set to true to show excerpts on the homepage
+excerpt_separator: "<!--more-->"
+
+defaults: 
+  - 
+    scope:
+      type: posts
+      path: _posts
+    values:
+      is_post: true
+      layout: bot
+
+include: [_pages]
+
+# Minima date format
+# refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
+minima:
+  date_format: "%b %-d, %Y"
+
+
+
+# Build settings
+theme: minima
+
+plugins:
+ - jekyll-feed
+ - jekyll-seo-tag

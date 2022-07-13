@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" href="{{ "/assets/favicon/favicon-32x32.png" | relative_url }}" sizes="32x32"/>
+    <link rel="icon" type="image/png" href="{{ "/assets/favicon/favicon-16x16.png" | relative_url }}" sizes="16x16"/>
+    
+    {%- include mathjax.html -%}
+
+    <title>Risou Math</title>
+    <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+</head>
+
+<body> 
+<header> 
+    <nav>
+        <ul class="links">
+            <li><a href="https://risoume.github.io">Landing Page</a></li>
+        </ul>
+    </nav> 
+</header> 
+
+<main>
+    <div class="content-page">
+ 
+        {% assign sorted_cats = site.categories | sort %}
+        {% for category in sorted_cats %}
+            <div class="topic-list">
+            {% capture category_name %}{{ category | first }}{% endcapture %}
+        
+            <h1>{{ category_name }}</h1>
+            <ol>
+                {% assign sorted_post = site.categories[category_name] | sort: "title" %}
+                {% for post in sorted_post %}
+                <li><a href="{{ post.url | relative_url }}">
+                    {{ post.title_page | escape }}
+                </a></li><hr>
+                {% endfor %}
+            </ol>
+            </div>
+        {% endfor %}
+           
+    </div>
+</main>
+</body>
+</html>

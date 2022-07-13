@@ -1,0 +1,19 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {%- seo -%}
+  <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+  {%- feed_meta -%}
+
+  <link rel="icon" type="image/png" href="{{ "/assets/favicon/favicon-32x32.png" | relative_url }}" sizes="32x32"/>
+  <link rel="icon" type="image/png" href="{{ "/assets/favicon/favicon-16x16.png" | relative_url }}" sizes="16x16"/>
+  
+  {%- include mathjax.html -%}
+
+  {% unless page.layout == "visualisasi" %}
+    <script src="/assets/js/common.js"  type="text/javascript" charset="utf-8" defer></script> 
+  {% endunless %}
+  <script src="/assets/js/{{ page.js }}.js"  type="text/javascript" charset="utf-8" defer></script>
+
+</head>
