@@ -1,21 +1,19 @@
-
 * {box-sizing: border-box;}
+:root {font-size: 10px}
 
 html, body {
-    margin:0;
-    padding:0;
-    font-family:"Open Sans",sans-serif;
-    letter-spacing:.02em;
-    line-height:1.4;
-    color:#222;
-    font-size:1.6rem;
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+    letter-spacing: .02em;
+    line-height: 1.4;
+    color: #222;
+    font-size: 1.6rem;
 }
-
-:root {font-size: 10px}
 
 // Body Section
 
-main, nav .links{
+main, nav .links {
     max-width: 115rem;
     margin: 0 auto;
     padding: 0 2rem;
@@ -104,7 +102,7 @@ header {margin-bottom: 10rem;}
     margin: 0 auto;
     margin-bottom: 5rem;
     background-color: #f2f1e8;
-    box-shadow: 0 5px 5px -3px #555, 0 -5px 5px -3px #3d91e0;
+    //box-shadow: 0 5px 5px -3px #555, 0 -5px 5px -3px #3d91e0;
 }
 
 @media (max-width: 620px) {
@@ -112,6 +110,8 @@ header {margin-bottom: 10rem;}
 }
 
 .content-page .topic-list h1 {font-size: 3rem;}
+
+hr {color: #dedede;}
 
 // User Area: only in math-utility. Input and Button
 

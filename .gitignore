@@ -4,5 +4,6 @@
 .sass-cache
 _site
 mathjax
+draft
 *.gem
 *.txt
