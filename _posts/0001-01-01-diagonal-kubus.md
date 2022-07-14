@@ -11,7 +11,7 @@ js: diagonal-kubus_s
     <div class="content"> 
         <div class="subject">
             <h1>Diagonal pada kubus</h1>
-            <a href="https://github.com/risoume/risoume.github.io/blob/main/assets/js/diagonal-kubus_s.js"><span>&lt;code></span></a>
+            <a href="https://github.com/risoume/mathematics/blob/main/assets/js/diagonal-kubus_s.js"><span>&lt;code></span></a>
             <p>Visualisasi diagonal sisi, diagonal ruang, bidang diagonal, dan segitiga pada kubus.</p>
             <div class="user-area">   
                 <label class="label-input">Masukkan bidang atau garis:</label>

@@ -11,7 +11,7 @@ js: mutually-overlapping-circles_s
     <div class="content"> 
         <div class="subject">
             <h1>Mutually Overlapping Circles</h1>
-            <a href="https://github.com/risoume/risoume.github.io/blob/main/assets/js/mutually-overlapping-circles_s.js"><span>&lt;code></span></a>
+            <a href="https://github.com/risoume/mathematics/blob/main/assets/js/mutually-overlapping-circles_s.js"><span>&lt;code></span></a>
             <p>Visualisasi lingkaran yang saling berpotongan.</p>
             <div class="user-area">
                 <label>Warna: </label> <br>
